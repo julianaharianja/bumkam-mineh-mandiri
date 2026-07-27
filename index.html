@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUMKam Mineh Mandiri — Kampung Minas Barat, Kec. Minas, Kab. Siak, Riau</title>
+<meta name="description" content="Situs resmi Badan Usaha Milik Kampung (BUMKam) Mineh Mandiri, Kampung Minas Barat, Kecamatan Minas, Kabupaten Siak, Provinsi Riau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest-deep:#173327;
+    --forest-mid:#2C5240;
+    --forest-line:#3E6B54;
+    --amber:#D9A441;
+    --amber-soft:#F0C874;
+    --clay:#8B5A2B;
+    --paper:#F1EFE1;
+    --paper-alt:#E7E3D0;
+    --ink:#1B1A15;
+    --ink-soft:#514E42;
+    --line:#CFC9AE;
+    --radius:2px;
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--forest-deep);
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--clay);
+  }
+  :focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+
+  /* ---------- NAV ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(241,239,225,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:var(--maxw);margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-mark{
+    width:34px;height:34px;border-radius:50%;
+    background:var(--forest-deep);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--amber-soft);font-family:'Fraunces',serif;font-weight:600;font-size:16px;
+    flex-shrink:0;
+  }
+  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:16.5px;color:var(--forest-deep);line-height:1.15;}
+  .brand-sub{font-size:11px;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;letter-spacing:.03em;}
+  nav.links{display:flex;gap:26px;font-size:14.5px;font-weight:500;}
+  nav.links a{position:relative;color:var(--ink);padding:4px 0;}
+  nav.links a::after{
+    content:'';position:absolute;left:0;bottom:-2px;width:0;height:1.5px;
+    background:var(--amber);transition:width .25s var(--ease);
+  }
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    font-size:13.5px;font-weight:600;background:var(--forest-deep);color:var(--paper);
+    padding:9px 16px;border-radius:var(--radius);white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--forest-mid);}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius);padding:8px 10px;cursor:pointer;}
+  .menu-btn span, .menu-btn span::before, .menu-btn span::after{
+    content:'';display:block;width:18px;height:2px;background:var(--ink);position:relative;
+  }
+  .menu-btn span::before{position:absolute;top:-6px;width:18px;height:2px;background:var(--ink);}
+  .menu-btn span::after{position:absolute;top:6px;width:18px;height:2px;background:var(--ink);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--forest-deep);
+    color:var(--paper);
+    position:relative;
+    overflow:hidden;
+    padding:76px 0 64px;
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(217,164,65,.16), transparent 45%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 2px, transparent 2px 34px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .hero .eyebrow{color:var(--amber-soft);margin-bottom:18px;display:inline-block;}
+  .hero h1{
+    font-size:clamp(38px,6vw,64px);
+    line-height:1.02;
+    color:var(--paper);
+    max-width:14ch;
+  }
+  .hero h1 em{font-style:italic;color:var(--amber-soft);}
+  .hero-tagline{
+    margin-top:20px;max-width:46ch;font-size:17px;color:#D8D6C4;
+  }
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-weight:600;font-size:14.5px;padding:13px 22px;border-radius:var(--radius);
+    display:inline-flex;align-items:center;gap:8px;border:1px solid transparent;
+    transition:transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+  }
+  .btn-primary{background:var(--amber);color:var(--forest-deep);}
+  .btn-primary:hover{background:var(--amber-soft);transform:translateY(-1px);}
+  .btn-outline{border-color:rgba(241,239,225,.4);color:var(--paper);}
+  .btn-outline:hover{border-color:var(--amber-soft);color:var(--amber-soft);}
+
+  /* locator breadcrumb — signature element */
+  .locator{
+    margin-top:52px;display:flex;align-items:center;flex-wrap:wrap;gap:0;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+  }
+  .locator-item{display:flex;align-items:center;gap:10px;color:#B9B69F;}
+  .locator-item.is-last{color:var(--amber-soft);font-weight:500;}
+  .locator-dot{
+    width:7px;height:7px;border-radius:50%;background:#8E9284;flex-shrink:0;
+  }
+  .locator-item.is-last .locator-dot{
+    background:var(--amber);box-shadow:0 0 0 4px rgba(217,164,65,.22);
+  }
+  .locator-seg{width:26px;height:1px;background:#4A6154;margin:0 10px;}
+
+  /* ---------- SECTION generic ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:640px;margin-bottom:48px;}
+  .section-head .eyebrow{margin-bottom:12px;display:block;}
+  .section-head h2{font-size:clamp(26px,3.4vw,36px);}
+  .section-head p{margin-top:14px;color:var(--ink-soft);font-size:15.5px;}
+
+  .frond-divider{height:34px;position:relative;}
+  .frond-divider svg{width:100%;height:100%;display:block;}
+
+  /* ---------- TENTANG ---------- */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;}
+  .about-grid p{color:var(--ink-soft);margin:0 0 16px;font-size:15.5px;}
+  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .stat{background:var(--paper);padding:22px;}
+  .stat b{
+    display:block;font-family:'Fraunces',serif;font-size:30px;color:var(--forest-deep);font-weight:600;
+  }
+  .stat span{font-size:12.5px;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;}
+  .visi-misi{
+    margin-top:26px;background:var(--paper-alt);border-left:3px solid var(--amber);padding:20px 22px;
+  }
+  .visi-misi h3{font-size:16px;margin-bottom:8px;}
+  .visi-misi p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+  /* ---------- UNIT USAHA ---------- */
+  .unit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .unit-card{background:var(--paper);padding:30px 26px;transition:background .2s var(--ease);}
+  .unit-card:hover{background:var(--paper-alt);}
+  .unit-icon{
+    width:42px;height:42px;border-radius:50%;background:var(--forest-deep);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  }
+  .unit-icon svg{width:20px;height:20px;stroke:var(--amber-soft);}
+  .unit-card h3{font-size:17.5px;margin-bottom:8px;}
+  .unit-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+  .unit-tag{
+    margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--clay);
+    letter-spacing:.04em;text-transform:uppercase;
+  }
+
+  /* ---------- LAYANAN ---------- */
+  .layanan-list{border-top:1px solid var(--line);}
+  .layanan-row{
+    display:grid;grid-template-columns:2fr 3fr 1fr;gap:24px;align-items:center;
+    padding:22px 0;border-bottom:1px solid var(--line);
+  }
+  .layanan-row h3{font-size:17px;}
+  .layanan-row p{margin:0;font-size:14px;color:var(--ink-soft);}
+  .layanan-jam{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--forest-mid);text-align:right;}
+
+  /* ---------- STRUKTUR ---------- */
+  .struktur{background:var(--forest-deep);color:var(--paper);border-radius:2px;}
+  .struktur-inner{padding:64px 0;}
+  .struktur .section-head h2{color:var(--paper);}
+  .struktur .section-head p{color:#C9C7B4;}
+  .org-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(241,239,225,.14);}
+  .org-card{background:var(--forest-mid);padding:26px 20px;}
+  .org-role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-soft);}
+  .org-name{margin-top:10px;font-family:'Fraunces',serif;font-size:17px;color:var(--paper);}
+  .org-note{margin-top:4px;font-size:12.5px;color:#B9B69F;}
+
+  /* ---------- PENGUMUMAN ---------- */
+  .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .news-card{border:1px solid var(--line);padding:24px;background:var(--paper);}
+  .news-date{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--clay);}
+  .news-card h3{font-size:16.5px;margin:10px 0 8px;}
+  .news-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+
+  /* ---------- LOKASI / KONTAK ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);}
+  .contact-info{padding:40px;background:var(--paper);}
+  .contact-info .item{margin-bottom:22px;}
+  .contact-info .item b{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--clay);margin-bottom:6px;}
+  .contact-info .item span{font-size:15px;color:var(--ink);}
+  .contact-map{min-height:340px;background:var(--paper-alt);position:relative;}
+  .contact-map iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.15) contrast(1.03);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep);color:#C9C7B4;padding:52px 0 26px;font-size:13.5px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  footer h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-soft);margin-bottom:14px;}
+  footer .brand-name{color:var(--paper);}
+  footer p{color:#B9B69F;max-width:36ch;margin-top:14px;}
+  footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;}
+  footer a:hover{color:var(--amber-soft);}
+  .footer-bottom{border-top:1px solid rgba(241,239,225,.14);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#8E9284;}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease), transform .6s var(--ease);}
+  .reveal.is-visible{opacity:1;transform:none;}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:920px){
+    nav.links{display:none;}
+    .menu-btn{display:flex;}
+    .about-grid{grid-template-columns:1fr;}
+    .unit-grid{grid-template-columns:repeat(2,1fr);}
+    .org-grid{grid-template-columns:repeat(2,1fr);}
+    .news-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .layanan-row{grid-template-columns:1fr;gap:6px;}
+    .layanan-jam{text-align:left;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .unit-grid{grid-template-columns:1fr;}
+    .about-stats{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    *{animation:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div>
+        <div class="brand-name">BUMKam Mineh Mandiri</div>
+        <div class="brand-sub">Kampung Minas Barat &middot; Riau</div>
+      </div>
+    </div>
+    <nav class="links">
+      <a href="#tentang">Tentang</a>
+      <a href="#unit-usaha">Unit Usaha</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#struktur">Struktur</a>
+      <a href="#pengumuman">Pengumuman</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <a href="#kontak" class="nav-cta">Hubungi Kami</a>
+    <button class="menu-btn" aria-label="Buka menu" id="menuBtn"><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Badan Usaha Milik Kampung</span>
+    <h1>Mineh Mandiri, <em>penggerak</em><br>ekonomi kampung.</h1>
+    <p class="hero-tagline">
+      BUMKam Mineh Mandiri mengelola unit-unit usaha milik Kampung Minas Barat
+      untuk kesejahteraan warga — dari simpan pinjam, persewaan alat pertanian,
+      hingga layanan air bersih dan pasar kampung.
+    </p>
+    <div class="hero-actions">
+      <a href="#unit-usaha" class="btn btn-primary">Lihat Unit Usaha</a>
+      <a href="#kontak" class="btn btn-outline">Hubungi Kantor</a>
+    </div>
+
+    <div class="locator" aria-label="Lokasi kantor">
+      <div class="locator-item"><span class="locator-dot"></span>Riau</div>
+      <div class="locator-seg"></div>
+      <div class="locator-item"><span class="locator-dot"></span>Kab. Siak</div>
+      <div class="locator-seg"></div>
+      <div class="locator-item"><span class="locator-dot"></span>Kec. Minas</div>
+      <div class="locator-seg"></div>
+      <div class="locator-item is-last"><span class="locator-dot"></span>Minas Barat</div>
+    </div>
+  </div>
+</section>
+
+<div class="frond-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 34" preserveAspectRatio="none">
+    <path d="M0,17 Q30,2 60,17 T120,17 T180,17 T240,17 T300,17 T360,17 T420,17 T480,17 T540,17 T600,17 T660,17 T720,17 T780,17 T840,17 T900,17 T960,17 T1020,17 T1080,17 T1140,17 T1200,17"
+      fill="none" stroke="#CFC9AE" stroke-width="1.4"/>
+  </svg>
+</div>
+
+<section id="tentang">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow">Tentang BUMKam</span>
+        <h2 style="margin-top:12px;font-size:clamp(26px,3.4vw,34px);">Milik kampung, dikelola untuk kampung.</h2>
+        <p style="margin-top:20px;">
+          BUMKam (Badan Usaha Milik Kampung) Mineh Mandiri adalah lembaga usaha yang
+          didirikan dan dimiliki oleh Kampung Minas Barat, Kecamatan Minas, Kabupaten Siak,
+          Provinsi Riau. Kami mengelola aset dan potensi ekonomi kampung secara profesional
+          agar hasilnya dapat dirasakan langsung oleh warga.
+        </p>
+        <p>
+          Sebagian besar warga Minas Barat menggantungkan penghidupan pada perkebunan
+          sawit, karet, dan usaha kecil. BUMKam hadir sebagai jembatan agar potensi
+          tersebut dikelola bersama, transparan, dan berkelanjutan.
+        </p>
+        <div class="visi-misi">
+          <h3>Visi</h3>
+          <p>Menjadi lembaga usaha kampung yang mandiri, transparan, dan memberi manfaat
+          nyata bagi seluruh warga Minas Barat.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="about-stats">
+          <div class="stat"><b>6</b><span>Unit Usaha Aktif</span></div>
+          <div class="stat"><b>[Tahun]</b><span>Tahun Berdiri</span></div>
+          <div class="stat"><b>[Jumlah]</b><span>Warga Terlibat</span></div>
+          <div class="stat"><b>1</b><span>Kampung Pemilik</span></div>
+        </div>
+        <div class="visi-misi" style="margin-top:24px;">
+          <h3>Misi</h3>
+          <p>Mengelola unit usaha kampung secara profesional &middot; membuka lapangan
+          kerja bagi warga &middot; menyediakan layanan dasar dengan harga wajar &middot;
+          menjaga transparansi keuangan kepada masyarakat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="frond-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 34" preserveAspectRatio="none">
+    <path d="M0,17 Q30,32 60,17 T120,17 T180,17 T240,17 T300,17 T360,17 T420,17 T480,17 T540,17 T600,17 T660,17 T720,17 T780,17 T840,17 T900,17 T960,17 T1020,17 T1080,17 T1140,17 T1200,17"
+      fill="none" stroke="#CFC9AE" stroke-width="1.4"/>
+  </svg>
+</div>
+
+<section id="unit-usaha">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Unit Usaha</span>
+      <h2>Enam unit usaha, satu tujuan bersama.</h2>
+      <p>Setiap unit dikelola dengan pencatatan terpisah dan dilaporkan secara berkala
+      kepada Penghulu Kampung dan warga melalui musyawarah kampung.</p>
+    </div>
+    <div class="unit-grid reveal">
+      <div class="unit-card">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c4 4.5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6.5 6-11z"/></svg></div>
+        <h3>Pengelolaan Air Bersih</h3>
+        <p>Distribusi air bersih untuk rumah tangga di Minas Barat dengan iuran yang
+        terjangkau bagi warga.</p>
+        <div class="unit-tag">Unit 01</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Simpan Pinjam Kampung</h3>
+        <p>Layanan simpan pinjam skala kecil bagi warga dan pelaku usaha mikro kampung.</p>
+        <div class="unit-tag">Unit 02</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="4"/><path d="M7 10V6a5 5 0 0 1 10 0v4"/><path d="M6 14v4M18 14v4"/></svg></div>
+        <h3>Persewaan Alat Pertanian</h3>
+        <p>Penyewaan alat dan mesin pertanian/perkebunan untuk membantu produktivitas
+        petani sawit dan karet.</p>
+        <div class="unit-tag">Unit 03</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h11l3 4v6H4z"/><circle cx="8" cy="18" r="1.6"/><circle cx="16" cy="18" r="1.6"/></svg></div>
+        <h3>Jasa Transportasi &amp; Angkutan</h3>
+        <p>Layanan angkutan hasil panen dan kebutuhan logistik warga kampung.</p>
+        <div class="unit-tag">Unit 04</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16l-1.5 6h-13z"/><path d="M6 10l1.5 9h9L18 10"/></svg></div>
+        <h3>Toko &amp; Sembako Kampung</h3>
+        <p>Penyediaan kebutuhan pokok dengan harga yang wajar dan terjangkau bagi warga.</p>
+        <div class="unit-tag">Unit 05</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Pengelolaan Pasar Kampung</h3>
+        <p>Pengaturan lapak dan retribusi pasar kampung untuk mendukung pedagang lokal.</p>
+        <div class="unit-tag">Unit 06</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="layanan" style="background:var(--paper-alt);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Layanan Kantor</span>
+      <h2>Layanan yang dapat warga akses.</h2>
+    </div>
+    <div class="layanan-list reveal">
+      <div class="layanan-row">
+        <h3>Pendaftaran Simpan Pinjam</h3>
+        <p>Membawa KTP dan KK asli, mengisi formulir pengajuan di kantor BUMKam.</p>
+        <div class="layanan-jam">Senin–Jumat · 08.00–15.00</div>
+      </div>
+      <div class="layanan-row">
+        <h3>Sewa Alat Pertanian</h3>
+        <p>Pemesanan alat dilakukan minimal 2 hari sebelum penggunaan.</p>
+        <div class="layanan-jam">Senin–Sabtu · 08.00–16.00</div>
+      </div>
+      <div class="layanan-row">
+        <h3>Pengaduan &amp; Aspirasi Warga</h3>
+        <p>Warga dapat menyampaikan masukan langsung ke kantor atau melalui kontak di bawah.</p>
+        <div class="layanan-jam">Senin–Jumat · 08.00–15.00</div>
+      </div>
+      <div class="layanan-row">
+        <h3>Informasi Pasar Kampung</h3>
+        <p>Informasi lapak kosong dan jadwal retribusi pasar kampung.</p>
+        <div class="layanan-jam">Setiap hari · 06.00–12.00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="struktur">
+  <div class="wrap struktur">
+    <div class="struktur-inner">
+      <div class="wrap" style="padding:0 36px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Struktur Organisasi</span>
+          <h2>Pengurus BUMKam Mineh Mandiri.</h2>
+          <p>Nama dan jabatan pengurus dapat disesuaikan dengan susunan resmi hasil
+          musyawarah kampung.</p>
+        </div>
+        <div class="org-grid reveal">
+          <div class="org-card">
+            <div class="org-role">Penasihat</div>
+            <div class="org-name">Penghulu Kampung Minas Barat</div>
+            <div class="org-note">[Nama Pejabat]</div>
+          </div>
+          <div class="org-card">
+            <div class="org-role">Pengawas</div>
+            <div class="org-name">[Nama Pengawas]</div>
+            <div class="org-note">Badan Permusyawaratan Kampung</div>
+          </div>
+          <div class="org-card">
+            <div class="org-role">Direktur</div>
+            <div class="org-name">[Nama Direktur]</div>
+            <div class="org-note">Pelaksana Operasional</div>
+          </div>
+          <div class="org-card">
+            <div class="org-role">Bendahara</div>
+            <div class="org-name">[Nama Bendahara]</div>
+            <div class="org-note">Keuangan &amp; Pelaporan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pengumuman">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pengumuman</span>
+      <h2>Informasi terbaru kampung.</h2>
+    </div>
+    <div class="news-grid reveal">
+      <div class="news-card">
+        <div class="news-date">[Tanggal]</div>
+        <h3>Jadwal Musyawarah Laporan Tahunan</h3>
+        <p>Pengurus akan menyampaikan laporan pertanggungjawaban tahunan kepada warga.</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">[Tanggal]</div>
+        <h3>Pembukaan Pendaftaran Simpan Pinjam</h3>
+        <p>Pendaftaran gelombang baru dibuka bagi warga Minas Barat yang memenuhi syarat.</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">[Tanggal]</div>
+        <h3>Pemeliharaan Jaringan Air Bersih</h3>
+        <p>Akan ada pemeliharaan rutin, layanan air dapat terhenti sementara.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" style="background:var(--paper-alt);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Lokasi &amp; Kontak</span>
+      <h2>Kunjungi atau hubungi kantor kami.</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="item">
+          <b>Alamat Kantor</b>
+          <span>Kantor BUMKam Mineh Mandiri<br>Kampung Minas Barat, Kecamatan Minas,<br>Kabupaten Siak, Provinsi Riau</span>
+        </div>
+        <div class="item">
+          <b>Telepon / WhatsApp</b>
+          <span>[Nomor Telepon]</span>
+        </div>
+        <div class="item">
+          <b>Email</b>
+          <span>[email@bumkamminasbarat.id]</span>
+        </div>
+        <div class="item">
+          <b>Jam Layanan</b>
+          <span>Senin–Jumat, 08.00–15.00 WIB</span>
+        </div>
+        <a href="#" class="btn btn-primary" style="margin-top:8px;">Kirim Pesan WhatsApp</a>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps?q=Minas+Barat,+Kecamatan+Minas,+Kabupaten+Siak,+Riau&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Peta lokasi Kampung Minas Barat"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-name" style="font-family:'Fraunces',serif;font-size:18px;">BUMKam Mineh Mandiri</div>
+        <p>Badan Usaha Milik Kampung Minas Barat, Kecamatan Minas, Kabupaten Siak,
+        Provinsi Riau. Mengelola usaha kampung untuk kesejahteraan bersama.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#unit-usaha">Unit Usaha</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kantor</h4>
+        <ul>
+          <li>Minas Barat, Kec. Minas</li>
+          <li>Kab. Siak, Riau</li>
+          <li>[Nomor Telepon]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> BUMKam Mineh Mandiri. Seluruh hak dilindungi.</span>
+      <span>Kampung Minas Barat &middot; Kecamatan Minas &middot; Kabupaten Siak &middot; Riau</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile menu toggle (simple show/hide of links row)
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.querySelector('nav.links');
+  if(menuBtn){
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.style.display === 'flex';
+      navLinks.style.display = open ? 'none' : 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '64px';
+      navLinks.style.left = '0';
+      navLinks.style.right = '0';
+      navLinks.style.background = 'var(--paper)';
+      navLinks.style.padding = '18px 28px';
+      navLinks.style.borderBottom = '1px solid var(--line)';
+    });
+  }
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+</body>
+</html>
