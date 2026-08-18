@@ -22,14 +22,14 @@
             theme: {
                 extend: {
                     colors: {
-                        brandNavy: '#0B1E3D',
-                        brandNavyLight: '#162F5C',
-                        brandGreen: '#15803D',
-                        brandGreenLight: '#22C55E',
-                        brandGold: '#D97706',
-                        brandGoldLight: '#F59E0B',
-                        brandBlue: '#1D4ED8',
-                        brandBg: '#F8FAFC'
+                        brandNavy: '#183B4A',
+                        brandNavyLight: '#2F5960',
+                        brandGreen: '#5F8F6A',
+                        brandGreenLight: '#8FB89A',
+                        brandGold: '#B99A52',
+                        brandGoldLight: '#D4BC78',
+                        brandBlue: '#557B86',
+                        brandBg: '#F5F7F3'
                     },
                     fontFamily: {
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
@@ -41,6 +41,108 @@
     <style>
         html { scroll-behavior: smooth; }
     </style>
+
+<style id="soft-bumkam-theme">
+    :root {
+        --soft-navy: #183B4A;
+        --soft-navy-2: #2F5960;
+        --soft-green: #5F8F6A;
+        --soft-green-light: #8FB89A;
+        --soft-gold: #B99A52;
+        --soft-cream: #F5F7F3;
+        --soft-surface: #FFFFFF;
+        --soft-border: #DCE5DF;
+        --soft-text: #33454A;
+        --soft-muted: #718087;
+    }
+
+    body {
+        background: var(--soft-cream) !important;
+        color: var(--soft-text);
+    }
+
+    ::selection {
+        background: #BFD6C3;
+        color: #183B4A;
+    }
+
+    /* Navigasi */
+    header {
+        background: rgba(250, 252, 249, 0.94) !important;
+        border-color: rgba(220, 229, 223, 0.9) !important;
+    }
+
+    /* Hero dibuat lebih tenang, tetap berwibawa */
+    #beranda {
+        background: linear-gradient(135deg, #183B4A 0%, #2F5960 52%, #3F6E67 100%) !important;
+    }
+
+    #beranda .bg-brandGold\/15 {
+        background-color: rgba(185, 154, 82, 0.10) !important;
+    }
+
+    #beranda .bg-brandGreen\/20 {
+        background-color: rgba(143, 184, 154, 0.14) !important;
+    }
+
+    /* Section selang-seling dengan cream lembut */
+    #profil, #unit-usaha {
+        background: #F2F6F1 !important;
+    }
+
+    #sambutan, #struktur {
+        background: #FFFFFF !important;
+    }
+
+    /* Kartu */
+    .shadow-sm {
+        box-shadow: 0 4px 18px rgba(38, 61, 66, 0.06) !important;
+    }
+
+    .shadow-xl, .shadow-2xl {
+        box-shadow: 0 18px 45px rgba(24, 59, 74, 0.12) !important;
+    }
+
+    /* Garis pemisah/outline lebih lembut */
+    .border-slate-200,
+    .border-slate-200\/60,
+    .border-slate-200\/80,
+    .border-slate-100 {
+        border-color: var(--soft-border) !important;
+    }
+
+    /* Form lebih nyaman dilihat */
+    input, textarea {
+        background: #FBFCFA;
+        border-color: #D8E2DB !important;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #7FA68A !important;
+        box-shadow: 0 0 0 3px rgba(127, 166, 138, 0.12);
+    }
+
+    /* Tombol utama */
+    #kontak button[type="button"] {
+        background: #5F8F6A !important;
+    }
+
+    #kontak button[type="button"]:hover {
+        background: #527C5D !important;
+    }
+
+    /* Footer tidak hitam pekat */
+    footer {
+        background: #19333C !important;
+        border-color: rgba(255,255,255,0.08) !important;
+    }
+
+    /* Sedikit melembutkan efek hover */
+    a, button, .transition-all, .transition-colors, .transition-shadow {
+        transition-duration: 220ms;
+    }
+</style>
+
 </head>
 <body class="bg-brandBg text-slate-800 font-sans antialiased overflow-x-hidden">
 
@@ -103,7 +205,7 @@
                     BUMKam Mineh Mandiri mengoptimalkan potensi lokal, mengelola sumber daya kampung secara profesional, serta mendorong pertumbuhan ekonomi warga secara berkelanjutan.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#unit-usaha" class="px-7 py-3.5 bg-brandGreen hover:bg-emerald-600 text-white font-bold rounded-xl shadow-lg shadow-brandGreen/25 transition-all transform hover:-translate-y-0.5">
+                    <a href="#unit-usaha" class="px-7 py-3.5 bg-brandGreen hover:bg-[#6F9B79] text-white font-bold rounded-xl shadow-lg shadow-brandGreen/25 transition-all transform hover:-translate-y-0.5">
                         Jelajahi Unit Usaha
                     </a>
                     <a href="#kontak" class="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 backdrop-blur-sm transition-all">
@@ -222,7 +324,7 @@
                     <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGold bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" alt="Penasihat" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-amber-100 text-amber-800 font-bold text-xs rounded-full mb-2">Penasihat</span>
+                    <span class="inline-block px-3 py-0.5 bg-[#F3EEDC] text-[#806C35] font-bold text-xs rounded-full mb-2">Penasihat</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Penghulu / Kades</h4>
                     <p class="text-xs text-slate-500 mt-0.5">Penghulu Kampung Mineh</p>
                 </div>
@@ -231,7 +333,7 @@
                     <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandNavy bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200" alt="Pengawas" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-blue-100 text-brandNavy font-bold text-xs rounded-full mb-2">Pengawas</span>
+                    <span class="inline-block px-3 py-0.5 bg-[#E7EFF0] text-brandNavy font-bold text-xs rounded-full mb-2">Pengawas</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Ketua BPK</h4>
                     <p class="text-xs text-slate-500 mt-0.5">Ketua Badan Pengawas</p>
                 </div>
@@ -263,7 +365,7 @@
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandBlue bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Sekretaris" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-blue-100 text-brandBlue font-bold text-xs rounded-full mb-1">Sekretaris</span>
+                    <span class="inline-block px-3 py-0.5 bg-[#E7EFF0] text-brandBlue font-bold text-xs rounded-full mb-1">Sekretaris</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Sekretaris, A.Md.</h4>
                     <p class="text-xs text-slate-500">Administrasi & Keorganisasian</p>
                 </div>
@@ -272,7 +374,7 @@
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGreen bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200" alt="Bendahara" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-emerald-100 text-brandGreen font-bold text-xs rounded-full mb-1">Bendahara</span>
+                    <span class="inline-block px-3 py-0.5 bg-[#E7F0E8] text-brandGreen font-bold text-xs rounded-full mb-1">Bendahara</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Bendahara, S.Ak.</h4>
                     <p class="text-xs text-slate-500">Pengelolaan Keuangan & Aset</p>
                 </div>
@@ -285,10 +387,10 @@
             <!-- Tier 4: Kepala Unit Usaha -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all" data-aos="zoom-in-up" data-aos-delay="500">
-                    <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-blue-500 bg-slate-200">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-[#7C9EA5] bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Ka Unit Air" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-2.5 py-0.5 bg-blue-100 text-blue-700 font-bold text-[11px] rounded-full mb-1">Ka. Unit Air Bersih</span>
+                    <span class="inline-block px-2.5 py-0.5 bg-[#E7EFF0] text-[#557B86] font-bold text-[11px] rounded-full mb-1">Ka. Unit Air Bersih</span>
                     <h5 class="text-sm font-bold text-brandNavy">Nama Kepala Unit</h5>
                 </div>
 
@@ -296,7 +398,7 @@
                     <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGreen bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" alt="Ka Unit Pertanian" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-brandGreen font-bold text-[11px] rounded-full mb-1">Ka. Unit Pertanian</span>
+                    <span class="inline-block px-2.5 py-0.5 bg-[#E7F0E8] text-brandGreen font-bold text-[11px] rounded-full mb-1">Ka. Unit Pertanian</span>
                     <h5 class="text-sm font-bold text-brandNavy">Nama Kepala Unit</h5>
                 </div>
 
@@ -304,7 +406,7 @@
                     <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGold bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Ka Unit Perdagangan" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-bold text-[11px] rounded-full mb-1">Ka. Unit Perdagangan</span>
+                    <span class="inline-block px-2.5 py-0.5 bg-[#F3EEDC] text-[#806C35] font-bold text-[11px] rounded-full mb-1">Ka. Unit Perdagangan</span>
                     <h5 class="text-sm font-bold text-brandNavy">Nama Kepala Unit</h5>
                 </div>
             </div>
@@ -325,7 +427,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Unit 1 -->
                 <div class="bg-white rounded-3xl p-8 border border-slate-200/60 hover:border-brandBlue transition-all hover:-translate-y-1 shadow-sm hover:shadow-md" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-blue-500/20">
+                    <div class="w-14 h-14 bg-[#668C96] text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#557B86]/15">
                         <i class="fa-solid fa-droplet"></i>
                     </div>
                     <h3 class="text-xl font-bold text-brandNavy mb-3">Pengelolaan Air Bersih</h3>
@@ -336,7 +438,7 @@
 
                 <!-- Unit 2 -->
                 <div class="bg-white rounded-3xl p-8 border border-slate-200/60 hover:border-brandGreen transition-all hover:-translate-y-1 shadow-sm hover:shadow-md" data-aos="zoom-in-up" data-aos-delay="200">
-                    <div class="w-14 h-14 bg-brandGreen text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brandGreen/20">
+                    <div class="w-14 h-14 bg-brandGreen text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#5F8F6A]/15">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
                     <h3 class="text-xl font-bold text-brandNavy mb-3">Pertanian & Perkebunan</h3>
@@ -347,7 +449,7 @@
 
                 <!-- Unit 3 -->
                 <div class="bg-white rounded-3xl p-8 border border-slate-200/60 hover:border-brandGold transition-all hover:-translate-y-1 shadow-sm hover:shadow-md" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-brandGoldLight text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brandGold/20">
+                    <div class="w-14 h-14 bg-brandGoldLight text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#B99A52]/15">
                         <i class="fa-solid fa-store"></i>
                     </div>
                     <h3 class="text-xl font-bold text-brandNavy mb-3">Perdagangan & Jasa</h3>
@@ -394,7 +496,7 @@
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center text-sky-400 shrink-0">
+                            <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center text-[#8AAEB5] shrink-0">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
@@ -421,7 +523,7 @@
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Pesan / Pertanyaan</label>
                             <textarea rows="4" placeholder="Tuliskan pesan Anda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandGreen text-sm"></textarea>
                         </div>
-                        <button type="button" class="w-full py-3.5 bg-brandGreen hover:bg-emerald-700 text-white font-bold rounded-xl shadow-md transition-colors">
+                        <button type="button" class="w-full py-3.5 bg-brandGreen hover:bg-[#567D61] text-white font-bold rounded-xl shadow-md transition-colors">
                             Kirim Pesan
                         </button>
                     </form>
