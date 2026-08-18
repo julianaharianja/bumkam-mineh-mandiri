@@ -15,18 +15,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brandNavy: '#0F2B5C',
+                        brandNavy: '#0B1E3D',
+                        brandNavyLight: '#162F5C',
+                        brandGreen: '#15803D',
+                        brandGreenLight: '#22C55E',
+                        brandGold: '#D97706',
+                        brandGoldLight: '#F59E0B',
                         brandBlue: '#1D4ED8',
-                        brandWater: '#2563EB',
-                        brandGreen: '#16A34A',
-                        brandGold: '#EAB308',
                         brandBg: '#F8FAFC'
                     },
                     fontFamily: {
@@ -43,100 +45,108 @@
 <body class="bg-brandBg text-slate-800 font-sans antialiased overflow-x-hidden">
 
     <!-- Navbar -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-100 shadow-sm">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-200/80 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <img src="logo.jpeg" alt="Logo BUMKam Mineh Mandiri" class="h-12 w-auto object-contain">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="p-1 bg-slate-50 rounded-lg border border-slate-100 group-hover:border-slate-200 transition-colors">
+                    <img src="logo.jpeg" alt="Logo BUMKam Mineh Mandiri" class="h-10 w-auto object-contain">
+                </div>
                 <div>
-                    <span class="block text-lg font-bold text-brandNavy leading-tight">BUMKam</span>
-                    <span class="block text-xs font-semibold text-brandGreen tracking-wider">MINEH MANDIRI</span>
+                    <span class="block text-lg font-extrabold text-brandNavy leading-none tracking-tight">BUMKam</span>
+                    <span class="block text-[11px] font-bold text-brandGreen tracking-wider mt-0.5">MINEH MANDIRI</span>
                 </div>
             </a>
             
             <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
-                <a href="#beranda" class="hover:text-brandBlue transition-colors">Beranda</a>
-                <a href="#sambutan" class="hover:text-brandBlue transition-colors">Sambutan Direktur</a>
-                <a href="#profil" class="hover:text-brandBlue transition-colors">Profil & Visi Misi</a>
-                <a href="#struktur" class="hover:text-brandBlue transition-colors">Struktur Organisasi</a>
-                <a href="#unit-usaha" class="hover:text-brandBlue transition-colors">Unit Usaha</a>
-                <a href="#kontak" class="hover:text-brandBlue transition-colors">Kontak</a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#beranda" class="hover:text-brandGreen transition-colors py-2">Beranda</a>
+                <a href="#sambutan" class="hover:text-brandGreen transition-colors py-2">Sambutan Direktur</a>
+                <a href="#profil" class="hover:text-brandGreen transition-colors py-2">Profil & Visi Misi</a>
+                <a href="#struktur" class="hover:text-brandGreen transition-colors py-2">Struktur Organisasi</a>
+                <a href="#unit-usaha" class="hover:text-brandGreen transition-colors py-2">Unit Usaha</a>
+                <a href="#kontak" class="px-5 py-2.5 bg-brandNavy hover:bg-brandNavyLight text-white rounded-xl shadow-sm transition-all hover:shadow-md">Kontak</a>
             </nav>
 
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="lg:hidden text-slate-700 text-2xl focus:outline-none">
+            <button id="menu-btn" class="lg:hidden text-slate-700 text-2xl focus:outline-none p-2 rounded-lg hover:bg-slate-100">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
-            <a href="#beranda" class="block text-slate-600 font-medium hover:text-brandBlue">Beranda</a>
-            <a href="#sambutan" class="block text-slate-600 font-medium hover:text-brandBlue">Sambutan Direktur</a>
-            <a href="#profil" class="block text-slate-600 font-medium hover:text-brandBlue">Profil & Visi Misi</a>
-            <a href="#struktur" class="block text-slate-600 font-medium hover:text-brandBlue">Struktur Organisasi</a>
-            <a href="#unit-usaha" class="block text-slate-600 font-medium hover:text-brandBlue">Unit Usaha</a>
-            <a href="#kontak" class="block text-slate-600 font-medium hover:text-brandBlue">Kontak</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#beranda" class="block text-slate-700 font-semibold hover:text-brandGreen">Beranda</a>
+            <a href="#sambutan" class="block text-slate-700 font-semibold hover:text-brandGreen">Sambutan Direktur</a>
+            <a href="#profil" class="block text-slate-700 font-semibold hover:text-brandGreen">Profil & Visi Misi</a>
+            <a href="#struktur" class="block text-slate-700 font-semibold hover:text-brandGreen">Struktur Organisasi</a>
+            <a href="#unit-usaha" class="block text-slate-700 font-semibold hover:text-brandGreen">Unit Usaha</a>
+            <a href="#kontak" class="block text-brandGreen font-bold">Hubungi Kami</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="beranda" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-brandNavy via-brandNavy to-slate-900 text-white relative overflow-hidden">
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brandGold/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-brandGreen/20 rounded-full blur-3xl"></div>
+    <section id="beranda" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-brandNavy via-brandNavyLight to-slate-900 text-white relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brandGold/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brandGreen/20 rounded-full blur-3xl pointer-events-none"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" data-aos-duration="1000">
-                <span class="inline-block px-3 py-1 bg-brandGold/20 text-brandGold text-xs font-bold rounded-full mb-4 border border-brandGold/30">
-                    Badan Usaha Milik Kampung
-                </span>
-                <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight mb-6">
-                    Membangun Ekonomi Kampung yang <span class="text-brandGold">Mandiri</span> & <span class="text-brandGreen">Sejahtera</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/15">
+                    <span class="w-2 h-2 rounded-full bg-brandGoldLight animate-pulse"></span>
+                    <span class="text-xs font-bold text-slate-200 uppercase tracking-wide">Badan Usaha Milik Kampung</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+                    Membangun Ekonomi Kampung <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandGoldLight to-amber-300">Mandiri</span> & <span class="text-brandGreenLight">Sejahtera</span>
                 </h1>
-                <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
-                    BUMKam Mineh Mandiri hadir sebagai penggerak potensi lokal, mengelola sumber daya kampung secara profesional demi mewujudkan kesejahteraan bersama.
+                <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-2xl font-normal">
+                    BUMKam Mineh Mandiri mengoptimalkan potensi lokal, mengelola sumber daya kampung secara profesional, serta mendorong pertumbuhan ekonomi warga secara berkelanjutan.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#unit-usaha" class="px-6 py-3 bg-brandGreen hover:bg-emerald-600 text-white font-semibold rounded-lg shadow-lg transition-all transform hover:-translate-y-0.5">
+                    <a href="#unit-usaha" class="px-7 py-3.5 bg-brandGreen hover:bg-emerald-600 text-white font-bold rounded-xl shadow-lg shadow-brandGreen/25 transition-all transform hover:-translate-y-0.5">
                         Jelajahi Unit Usaha
                     </a>
-                    <a href="#kontak" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-all">
+                    <a href="#kontak" class="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 backdrop-blur-sm transition-all">
                         Hubungi Kami
                     </a>
                 </div>
             </div>
-            <div class="flex justify-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-               <!-- KODE BARU (Kartu Putih Elegan) -->
-<div class="bg-white p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center transform hover:scale-105 transition-all duration-300">
-    <img src="logo.jpeg" alt="Logo BUMKam Mineh Mandiri" class="w-48 h-48 mx-auto object-contain mb-4">
-    <h3 class="text-xl font-bold text-brandNavy">BUMKam Mineh Mandiri</h3>
-    <p class="text-xs text-slate-500 mt-1 font-semibold">Integritas • Inovasi • Kesejahteraan</p>
-</div>
+
+            <!-- Card Logo Putih yang Rapi & Harmonis -->
+            <div class="lg:col-span-5 flex justify-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center border border-slate-100 transform hover:scale-105 transition-all duration-300">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 mb-6 flex justify-center items-center">
+                        <img src="logo.jpeg" alt="Logo BUMKam Mineh Mandiri" class="w-44 h-44 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-bold text-brandNavy tracking-tight">BUMKam Mineh Mandiri</h3>
+                    <p class="text-xs font-bold text-brandGreen uppercase tracking-wider mt-2">Integritas • Inovasi • Kesejahteraan</p>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- Kata Sambutan Direktur -->
-    <section id="sambutan" class="py-20 bg-white">
+    <section id="sambutan" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5" data-aos="fade-up-right" data-aos-duration="1000">
-                    <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-slate-100 bg-gradient-to-b from-slate-100 to-slate-200">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="Direktur BUMKam" class="w-full h-96 object-cover object-top">
-                        <div class="p-4 bg-brandNavy text-white text-center">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="Direktur BUMKam" class="w-full h-[420px] object-cover object-top">
+                        <div class="p-5 bg-gradient-to-t from-brandNavy via-brandNavy to-transparent text-white text-center absolute bottom-0 inset-x-0 pt-12">
                             <h4 class="font-bold text-lg">Nama Direktur, S.E.</h4>
-                            <p class="text-xs text-brandGold font-medium">Direktur BUMKam Mineh Mandiri</p>
+                            <p class="text-xs text-brandGoldLight font-semibold">Direktur Utama BUMKam Mineh Mandiri</p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:col-span-7" data-aos="fade-up-left" data-aos-duration="1000">
-                    <div class="inline-flex items-center gap-2 text-brandGreen font-bold text-sm tracking-wide uppercase mb-2">
+                    <div class="inline-flex items-center gap-2 text-brandGreen font-bold text-xs tracking-widest uppercase mb-3">
                         <span class="w-8 h-0.5 bg-brandGreen"></span> Kata Sambutan
                     </div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-brandNavy mb-6">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavy mb-6 leading-tight">
                         Menuju Kemandirian Ekonomi Kampung Melalui Sinergi Bersama
                     </h2>
-                    <blockquote class="text-slate-600 italic border-l-4 border-brandGold pl-4 mb-6 leading-relaxed">
+                    <blockquote class="text-slate-700 italic border-l-4 border-brandGold pl-5 py-1 mb-6 leading-relaxed font-medium bg-amber-50/50 rounded-r-xl">
                         "Salam sejahtera bagi kita semua. Kehadiran BUMKam Mineh Mandiri merupakan wujud komitmen kita bersama untuk mengoptimalkan potensi desa demi kemakmuran masyarakat."
                     </blockquote>
                     <p class="text-slate-600 leading-relaxed mb-4">
@@ -151,43 +161,43 @@
     </section>
 
     <!-- Profil & Visi Misi -->
-    <section id="profil" class="py-20 bg-slate-50">
+    <section id="profil" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <span class="text-brandBlue font-bold text-sm uppercase tracking-wider">Tentang Kami</span>
-                <h2 class="text-3xl font-bold text-brandNavy mt-2">Visi & Misi BUMKam</h2>
+                <span class="text-brandGreen font-bold text-xs uppercase tracking-widest">Profil Usaha</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavy mt-2">Visi & Misi BUMKam</h2>
                 <div class="w-16 h-1 bg-brandGold mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Visi Card -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 bg-brandBlue/10 text-brandBlue rounded-xl flex items-center justify-center text-xl mb-6">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/60 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-brandNavy/10 text-brandNavy rounded-2xl flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     <h3 class="text-xl font-bold text-brandNavy mb-4">Visi Utama</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                    <p class="text-slate-600 leading-relaxed font-normal">
                         "Menjadi Badan Usaha Milik Kampung yang mandiri, profesional, dan akuntabel dalam mengelola potensi lokal menuju masyarakat kampung yang sejahtera dan berdaya saing."
                     </p>
                 </div>
 
                 <!-- Misi Card -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 bg-brandGreen/10 text-brandGreen rounded-xl flex items-center justify-center text-xl mb-6">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/60 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-brandGreen/10 text-brandGreen rounded-2xl flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
                     <h3 class="text-xl font-bold text-brandNavy mb-4">Misi Strategis</h3>
                     <ul class="space-y-3 text-slate-600">
                         <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-brandGreen mt-1"></i>
+                            <i class="fa-solid fa-circle-check text-brandGreen mt-1 shrink-0"></i>
                             <span>Mengembangkan unit usaha berbasis potensi dan kebutuhan lokal.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-brandGreen mt-1"></i>
+                            <i class="fa-solid fa-circle-check text-brandGreen mt-1 shrink-0"></i>
                             <span>Meningkatkan kapasitas sumber daya manusia secara berkelanjutan.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-brandGreen mt-1"></i>
+                            <i class="fa-solid fa-circle-check text-brandGreen mt-1 shrink-0"></i>
                             <span>Membangun kemitraan strategis dengan pihak ketiga secara transparan.</span>
                         </li>
                     </ul>
@@ -197,115 +207,104 @@
     </section>
 
     <!-- Struktur Organisasi -->
-    <section id="struktur" class="py-20 bg-white">
+    <section id="struktur" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <span class="text-brandBlue font-bold text-sm uppercase tracking-wider">Kepengurusan</span>
-                <h2 class="text-3xl font-bold text-brandNavy mt-2">Struktur Organisasi</h2>
+                <span class="text-brandBlue font-bold text-xs uppercase tracking-widest">Kepengurusan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavy mt-2">Struktur Organisasi</h2>
                 <div class="w-16 h-1 bg-brandGold mx-auto mt-4 rounded-full"></div>
                 <p class="text-slate-500 mt-4 text-sm">Pengelola profesional BUMKam Mineh Mandiri dalam menjalankan operasional dan pengawasan usaha.</p>
             </div>
 
-            <!-- Organisasi Tier 1: Penasihat & Pengawas -->
+            <!-- Tier 1: Penasihat & Pengawas -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
-                <!-- Penasihat / Penghulu -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center shadow-sm hover:border-brandGold transition-all" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGold bg-slate-200">
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-center shadow-sm hover:border-brandGold transition-all" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGold bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" alt="Penasihat" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-brandGold/20 text-yellow-800 font-bold text-xs rounded-full mb-1">Penasihat</span>
+                    <span class="inline-block px-3 py-0.5 bg-amber-100 text-amber-800 font-bold text-xs rounded-full mb-2">Penasihat</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Penghulu / Kades</h4>
-                    <p class="text-xs text-slate-500">Penghulu Kampung Mineh</p>
+                    <p class="text-xs text-slate-500 mt-0.5">Penghulu Kampung Mineh</p>
                 </div>
 
-                <!-- Pengawas -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center shadow-sm hover:border-brandNavy transition-all" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandNavy bg-slate-200">
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-center shadow-sm hover:border-brandNavy transition-all" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandNavy bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200" alt="Pengawas" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-brandNavy/10 text-brandNavy font-bold text-xs rounded-full mb-1">Pengawas</span>
+                    <span class="inline-block px-3 py-0.5 bg-blue-100 text-brandNavy font-bold text-xs rounded-full mb-2">Pengawas</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Ketua BPK</h4>
-                    <p class="text-xs text-slate-500">Ketua Badan Pengawas</p>
+                    <p class="text-xs text-slate-500 mt-0.5">Ketua Badan Pengawas</p>
                 </div>
             </div>
 
-            <!-- Garis Penghubung Visual -->
             <div class="flex justify-center my-4" data-aos="fade-down">
                 <div class="w-0.5 h-8 bg-slate-300"></div>
             </div>
 
-            <!-- Organisasi Tier 2: Direktur -->
+            <!-- Tier 2: Direktur -->
             <div class="max-w-md mx-auto mb-8" data-aos="zoom-in" data-aos-delay="300">
-                <div class="bg-gradient-to-br from-brandNavy to-slate-800 text-white border border-brandNavy rounded-2xl p-6 text-center shadow-lg relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-brandGold/10 rounded-full blur-xl"></div>
-                    <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-brandGold bg-slate-200 shadow-md">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" alt="Direktur Operasional" class="w-full h-full object-cover">
+                <div class="bg-gradient-to-br from-brandNavy to-slate-800 text-white border border-brandNavy rounded-3xl p-6 text-center shadow-xl relative overflow-hidden">
+                    <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-brandGoldLight bg-slate-200 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" alt="Direktur Utama" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-1 bg-brandGold text-brandNavy font-extrabold text-xs rounded-full mb-2">Direktur Utama</span>
+                    <span class="inline-block px-3 py-1 bg-brandGoldLight text-brandNavy font-extrabold text-xs rounded-full mb-2">Direktur Utama</span>
                     <h4 class="text-lg font-bold text-white">Nama Direktur, S.E.</h4>
                     <p class="text-xs text-slate-300 mt-0.5">Penanggung Jawab Operasional</p>
                 </div>
             </div>
 
-            <!-- Garis Penghubung Visual -->
             <div class="flex justify-center my-4" data-aos="fade-down">
                 <div class="w-0.5 h-8 bg-slate-300"></div>
             </div>
 
-            <!-- Organisasi Tier 3: Sekretaris & Bendahara -->
+            <!-- Tier 3: Sekretaris & Bendahara -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
-                <!-- Sekretaris -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center shadow-sm hover:border-brandBlue transition-all" data-aos="fade-right" data-aos-delay="400">
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 text-center shadow-sm hover:border-brandBlue transition-all" data-aos="fade-right" data-aos-delay="400">
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandBlue bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Sekretaris" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-brandBlue/10 text-brandBlue font-bold text-xs rounded-full mb-1">Sekretaris</span>
+                    <span class="inline-block px-3 py-0.5 bg-blue-100 text-brandBlue font-bold text-xs rounded-full mb-1">Sekretaris</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Sekretaris, A.Md.</h4>
                     <p class="text-xs text-slate-500">Administrasi & Keorganisasian</p>
                 </div>
 
-                <!-- Bendahara -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center shadow-sm hover:border-brandGreen transition-all" data-aos="fade-left" data-aos-delay="400">
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 text-center shadow-sm hover:border-brandGreen transition-all" data-aos="fade-left" data-aos-delay="400">
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGreen bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200" alt="Bendahara" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-3 py-0.5 bg-brandGreen/10 text-brandGreen font-bold text-xs rounded-full mb-1">Bendahara</span>
+                    <span class="inline-block px-3 py-0.5 bg-emerald-100 text-brandGreen font-bold text-xs rounded-full mb-1">Bendahara</span>
                     <h4 class="text-base font-bold text-brandNavy">Nama Bendahara, S.Ak.</h4>
                     <p class="text-xs text-slate-500">Pengelolaan Keuangan & Aset</p>
                 </div>
             </div>
 
-            <!-- Garis Penghubung Visual -->
             <div class="flex justify-center my-4" data-aos="fade-down">
                 <div class="w-0.5 h-8 bg-slate-300"></div>
             </div>
 
-            <!-- Organisasi Tier 4: Kepala Unit Usaha -->
+            <!-- Tier 4: Kepala Unit Usaha -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <!-- Kepala Unit 1 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all" data-aos="zoom-in-up" data-aos-delay="500">
-                    <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandWater bg-slate-200">
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all" data-aos="zoom-in-up" data-aos-delay="500">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-blue-500 bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Ka Unit Air" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-2.5 py-0.5 bg-blue-100 text-brandWater font-semibold text-[11px] rounded-full mb-1">Ka. Unit Air Bersih</span>
+                    <span class="inline-block px-2.5 py-0.5 bg-blue-100 text-blue-700 font-bold text-[11px] rounded-full mb-1">Ka. Unit Air Bersih</span>
                     <h5 class="text-sm font-bold text-brandNavy">Nama Kepala Unit</h5>
                 </div>
 
-                <!-- Kepala Unit 2 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all" data-aos="zoom-in-up" data-aos-delay="600">
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all" data-aos="zoom-in-up" data-aos-delay="600">
                     <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGreen bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" alt="Ka Unit Pertanian" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-brandGreen font-semibold text-[11px] rounded-full mb-1">Ka. Unit Pertanian</span>
+                    <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-brandGreen font-bold text-[11px] rounded-full mb-1">Ka. Unit Pertanian</span>
                     <h5 class="text-sm font-bold text-brandNavy">Nama Kepala Unit</h5>
                 </div>
 
-                <!-- Kepala Unit 3 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all" data-aos="zoom-in-up" data-aos-delay="700">
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all" data-aos="zoom-in-up" data-aos-delay="700">
                     <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brandGold bg-slate-200">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Ka Unit Perdagangan" class="w-full h-full object-cover">
                     </div>
-                    <span class="inline-block px-2.5 py-0.5 bg-yellow-100 text-yellow-800 font-semibold text-[11px] rounded-full mb-1">Ka. Unit Perdagangan</span>
+                    <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-bold text-[11px] rounded-full mb-1">Ka. Unit Perdagangan</span>
                     <h5 class="text-sm font-bold text-brandNavy">Nama Kepala Unit</h5>
                 </div>
             </div>
@@ -314,44 +313,44 @@
     </section>
 
     <!-- Unit Usaha -->
-    <section id="unit-usaha" class="py-20 bg-slate-50">
+    <section id="unit-usaha" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <span class="text-brandGreen font-bold text-sm uppercase tracking-wider">Layanan & Bisnis</span>
-                <h2 class="text-3xl font-bold text-brandNavy mt-2">Unit Usaha Unggulan</h2>
+                <span class="text-brandGreen font-bold text-xs uppercase tracking-widest">Layanan & Bisnis</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavy mt-2">Unit Usaha Unggulan</h2>
                 <div class="w-16 h-1 bg-brandGold mx-auto mt-4 rounded-full"></div>
                 <p class="text-slate-500 mt-4 text-sm">Sektor-sektor usaha yang dikelola secara profesional untuk melayani warga.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Unit 1 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 hover:border-brandBlue transition-all hover:-translate-y-1 shadow-sm" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-brandBlue text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-brandBlue/30">
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 hover:border-brandBlue transition-all hover:-translate-y-1 shadow-sm hover:shadow-md" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-blue-500/20">
                         <i class="fa-solid fa-droplet"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-brandNavy mb-2">Pengelolaan Air Bersih</h3>
+                    <h3 class="text-xl font-bold text-brandNavy mb-3">Pengelolaan Air Bersih</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Penyediaan dan distribusi air bersih berkualitas untuk memenuhi kebutuhan harian masyarakat kampung secara merata.
                     </p>
                 </div>
 
                 <!-- Unit 2 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 hover:border-brandGreen transition-all hover:-translate-y-1 shadow-sm" data-aos="zoom-in-up" data-aos-delay="200">
-                    <div class="w-14 h-14 bg-brandGreen text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-brandGreen/30">
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 hover:border-brandGreen transition-all hover:-translate-y-1 shadow-sm hover:shadow-md" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-brandGreen text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brandGreen/20">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-brandNavy mb-2">Pertanian & Perkebunan</h3>
+                    <h3 class="text-xl font-bold text-brandNavy mb-3">Pertanian & Perkebunan</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Pengelolaan sektor agrobisnis dan penyediaan sarana produksi pertanian guna menyokong ketahanan pangan lokal.
                     </p>
                 </div>
 
                 <!-- Unit 3 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 hover:border-brandGold transition-all hover:-translate-y-1 shadow-sm" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-brandGold text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-brandGold/30">
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 hover:border-brandGold transition-all hover:-translate-y-1 shadow-sm hover:shadow-md" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-brandGoldLight text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brandGold/20">
                         <i class="fa-solid fa-store"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-brandNavy mb-2">Perdagangan & Jasa</h3>
+                    <h3 class="text-xl font-bold text-brandNavy mb-3">Perdagangan & Jasa</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Wadah pemasaran produk-produk UMKM lokal serta penyediaan jasa kebutuhan harian masyarakat.
                     </p>
@@ -361,68 +360,68 @@
     </section>
 
     <!-- Kontak -->
-    <section id="kontak" class="py-20 bg-brandNavy text-white relative">
+    <section id="kontak" class="py-24 bg-brandNavy text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 
                 <!-- Info Kontak -->
                 <div data-aos="fade-right" data-aos-duration="1000">
-                    <span class="text-brandGold font-bold text-sm uppercase tracking-wider">Hubungi Kami</span>
-                    <h2 class="text-3xl font-bold mt-2 mb-6">Kantor BUMKam Mineh Mandiri</h2>
-                    <p class="text-slate-300 mb-8 leading-relaxed">
+                    <span class="text-brandGoldLight font-bold text-xs uppercase tracking-widest">Hubungi Kami</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-6">Kantor BUMKam Mineh Mandiri</h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed font-normal">
                         Silakan hubungi kami untuk informasi kerja sama, unit usaha, atau pertanyaan seputar BUMKam.
                     </p>
 
-                    <div class="space-y-4">
+                    <div class="space-y-5">
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-brandGold shrink-0">
+                            <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center text-brandGoldLight shrink-0">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-sm">Alamat Kantor</h4>
-                                <p class="text-slate-300 text-sm">Jl. Utama Kampung Mineh, Siak, Riau</p>
+                                <h4 class="font-bold text-sm">Alamat Kantor</h4>
+                                <p class="text-slate-300 text-sm mt-0.5">Jl. Utama Kampung Mineh, Siak, Riau</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-brandGreen shrink-0">
+                            <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center text-brandGreenLight shrink-0">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-sm">Telepon / WhatsApp</h4>
-                                <p class="text-slate-300 text-sm">+62 812-3456-7890</p>
+                                <h4 class="font-bold text-sm">Telepon / WhatsApp</h4>
+                                <p class="text-slate-300 text-sm mt-0.5">+62 812-3456-7890</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-brandWater shrink-0">
+                            <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center text-sky-400 shrink-0">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-sm">Email</h4>
-                                <p class="text-slate-300 text-sm">info@bumkam-minehmandiri.id</p>
+                                <h4 class="font-bold text-sm">Email</h4>
+                                <p class="text-slate-300 text-sm mt-0.5">info@bumkam-minehmandiri.id</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Formulir Pesan -->
-                <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-xl" data-aos="fade-left" data-aos-duration="1000">
-                    <h3 class="text-xl font-bold text-brandNavy mb-6">Kirim Pesan</h3>
+                <div class="bg-white text-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl" data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="text-2xl font-bold text-brandNavy mb-6">Kirim Pesan</h3>
                     <form action="#" class="space-y-4">
                         <div>
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Nama Lengkap</label>
-                            <input type="text" placeholder="Masukkan nama..." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brandBlue text-sm">
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Nama Lengkap</label>
+                            <input type="text" placeholder="Masukkan nama Anda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandGreen text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Nomor WhatsApp</label>
-                            <input type="tel" placeholder="08xxxxxxxxx" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brandBlue text-sm">
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Nomor WhatsApp</label>
+                            <input type="tel" placeholder="08xxxxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandGreen text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Pesan / Pertanyaan</label>
-                            <textarea rows="4" placeholder="Tuliskan pesan Anda..." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brandBlue text-sm"></textarea>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Pesan / Pertanyaan</label>
+                            <textarea rows="4" placeholder="Tuliskan pesan Anda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandGreen text-sm"></textarea>
                         </div>
-                        <button type="button" class="w-full py-3 bg-brandBlue hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-colors">
+                        <button type="button" class="w-full py-3.5 bg-brandGreen hover:bg-emerald-700 text-white font-bold rounded-xl shadow-md transition-colors">
                             Kirim Pesan
                         </button>
                     </form>
@@ -433,23 +432,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+    <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p>&copy; 2026 BUMKam Mineh Mandiri. All rights reserved.</p>
+            <p>&copy; 2026 BUMKam Mineh Mandiri. Hak Cipta Dilindungi Undang-Undang.</p>
         </div>
     </footer>
 
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inisialisasi Efek Animasi Scroll (AOS)
         AOS.init({
             duration: 800,
             once: true,
             offset: 100,
         });
 
-        // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
