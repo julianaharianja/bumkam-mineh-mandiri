@@ -143,6 +143,43 @@
     }
 </style>
 
+
+<style id="professional-bumkam-enhancements">
+    #beranda {
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+    }
+
+    #kegiatan article, #berita article {
+        transform: translateY(0);
+    }
+
+    #kegiatan article:hover, #berita article:hover {
+        transform: translateY(-4px);
+    }
+
+    @media (max-width: 1023px) {
+        #beranda {
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 640px) {
+        #beranda h1 {
+            font-size: 2.25rem;
+        }
+
+        #beranda .grid-cols-3 {
+            gap: 0.75rem;
+        }
+
+        #beranda .grid-cols-3 p.text-2xl {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+
 </head>
 <body class="bg-brandBg text-slate-800 font-sans antialiased overflow-x-hidden">
 
@@ -166,6 +203,8 @@
                 <a href="#profil" class="hover:text-brandGreen transition-colors py-2">Profil & Visi Misi</a>
                 <a href="#struktur" class="hover:text-brandGreen transition-colors py-2">Struktur Organisasi</a>
                 <a href="#unit-usaha" class="hover:text-brandGreen transition-colors py-2">Unit Usaha</a>
+                <a href="#kegiatan" class="hover:text-brandGreen transition-colors py-2">Kegiatan</a>
+                <a href="#berita" class="hover:text-brandGreen transition-colors py-2">Berita</a>
                 <a href="#kontak" class="px-5 py-2.5 bg-brandNavy hover:bg-brandNavyLight text-white rounded-xl shadow-sm transition-all hover:shadow-md">Kontak</a>
             </nav>
 
@@ -182,49 +221,112 @@
             <a href="#profil" class="block text-slate-700 font-semibold hover:text-brandGreen">Profil & Visi Misi</a>
             <a href="#struktur" class="block text-slate-700 font-semibold hover:text-brandGreen">Struktur Organisasi</a>
             <a href="#unit-usaha" class="block text-slate-700 font-semibold hover:text-brandGreen">Unit Usaha</a>
+            <a href="#kegiatan" class="block text-slate-700 font-semibold hover:text-brandGreen">Kegiatan</a>
+            <a href="#berita" class="block text-slate-700 font-semibold hover:text-brandGreen">Berita</a>
             <a href="#kontak" class="block text-brandGreen font-bold">Hubungi Kami</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="beranda" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-brandNavy via-brandNavyLight to-slate-900 text-white relative overflow-hidden">
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brandGold/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brandGreen/20 rounded-full blur-3xl pointer-events-none"></div>
-        
+    <section id="beranda" class="pt-32 pb-20 md:pt-40 md:pb-28 text-white relative overflow-hidden">
+        <div class="absolute -top-32 -right-24 w-[28rem] h-[28rem] bg-brandGold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-20 w-[28rem] h-[28rem] bg-brandGreenLight/15 rounded-full blur-3xl pointer-events-none"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
             <div class="lg:col-span-7" data-aos="fade-right" data-aos-duration="1000">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/15">
                     <span class="w-2 h-2 rounded-full bg-brandGoldLight animate-pulse"></span>
                     <span class="text-xs font-bold text-slate-200 uppercase tracking-wide">Badan Usaha Milik Kampung</span>
                 </div>
+
                 <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
-                    Membangun Ekonomi Kampung <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandGoldLight to-amber-300">Mandiri</span> & <span class="text-brandGreenLight">Sejahtera</span>
+                    Membangun Ekonomi Kampung,
+                    <span class="text-brandGreenLight">Menggerakkan</span> Kesejahteraan Masyarakat
                 </h1>
-                <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed max-w-2xl font-normal">
-                    BUMKam Mineh Mandiri mengoptimalkan potensi lokal, mengelola sumber daya kampung secara profesional, serta mendorong pertumbuhan ekonomi warga secara berkelanjutan.
+
+                <p class="text-slate-200 text-base sm:text-lg mb-8 leading-relaxed max-w-2xl font-normal">
+                    BUMKam Mineh Mandiri hadir untuk mengelola potensi kampung secara profesional,
+                    mengembangkan unit usaha, dan memberikan manfaat nyata bagi masyarakat secara berkelanjutan.
                 </p>
+
                 <div class="flex flex-wrap gap-4">
-                    <a href="#unit-usaha" class="px-7 py-3.5 bg-brandGreen hover:bg-[#6F9B79] text-white font-bold rounded-xl shadow-lg shadow-brandGreen/25 transition-all transform hover:-translate-y-0.5">
-                        Jelajahi Unit Usaha
+                    <a href="#profil" class="px-7 py-3.5 bg-brandGreen hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg shadow-brandGreen/20 transition-all transform hover:-translate-y-0.5">
+                        Tentang Kami
                     </a>
-                    <a href="#kontak" class="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 backdrop-blur-sm transition-all">
-                        Hubungi Kami
+                    <a href="#unit-usaha" class="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 backdrop-blur-sm transition-all">
+                        Lihat Unit Usaha
                     </a>
                 </div>
-            </div>
 
-            <!-- Card Logo Putih yang Rapi & Harmonis -->
-            <div class="lg:col-span-5 flex justify-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center border border-slate-100 transform hover:scale-105 transition-all duration-300">
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 mb-6 flex justify-center items-center">
-                        <img src="logo.jpeg" alt="Logo BUMKam Mineh Mandiri" class="w-44 h-44 object-contain">
+                <div class="grid grid-cols-3 gap-4 max-w-xl mt-10 pt-8 border-t border-white/15">
+                    <div>
+                        <p class="text-2xl font-extrabold text-white">3+</p>
+                        <p class="text-xs text-slate-300 mt-1">Unit Usaha</p>
                     </div>
-                    <h3 class="text-2xl font-bold text-brandNavy tracking-tight">BUMKam Mineh Mandiri</h3>
-                    <p class="text-xs font-bold text-brandGreen uppercase tracking-wider mt-2">Integritas • Inovasi • Kesejahteraan</p>
+                    <div>
+                        <p class="text-2xl font-extrabold text-white">1</p>
+                        <p class="text-xs text-slate-300 mt-1">Kampung</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-extrabold text-white">100%</p>
+                        <p class="text-xs text-slate-300 mt-1">Untuk Masyarakat</p>
+                    </div>
                 </div>
             </div>
 
+            <div class="lg:col-span-5 flex justify-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                <div class="relative max-w-sm w-full">
+                    <div class="absolute -inset-5 bg-brandGreenLight/10 rounded-[2.5rem] blur-2xl"></div>
+                    <div class="relative bg-white/95 p-7 rounded-[2rem] shadow-2xl border border-white/60 text-center">
+                        <div class="bg-[#F2F6F1] p-7 rounded-[1.5rem] border border-[#DCE5DF] mb-6 flex justify-center items-center">
+                            <img src="logo.jpeg" alt="Logo BUMKam Mineh Mandiri" class="w-48 h-48 object-contain">
+                        </div>
+                        <h3 class="text-2xl font-bold text-brandNavy tracking-tight">BUMKam Mineh Mandiri</h3>
+                        <p class="text-xs font-bold text-brandGreen uppercase tracking-wider mt-2">Integritas • Inovasi • Kesejahteraan</p>
+                        <div class="mt-5 pt-5 border-t border-slate-200">
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Bersama mengembangkan potensi kampung untuk ekonomi yang mandiri dan berkelanjutan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekilas BUMKam -->
+    <section class="py-14 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div class="bg-[#F2F6F1] rounded-2xl p-5 border border-[#DCE5DF] text-center">
+                    <div class="w-11 h-11 mx-auto mb-3 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <p class="text-xs text-slate-500">Status</p>
+                    <p class="font-bold text-brandNavy mt-1">BUM Kampung</p>
+                </div>
+                <div class="bg-[#F2F6F1] rounded-2xl p-5 border border-[#DCE5DF] text-center">
+                    <div class="w-11 h-11 mx-auto mb-3 rounded-xl bg-brandGold/10 text-brandGold flex items-center justify-center">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <p class="text-xs text-slate-500">Fokus</p>
+                    <p class="font-bold text-brandNavy mt-1">Ekonomi Lokal</p>
+                </div>
+                <div class="bg-[#F2F6F1] rounded-2xl p-5 border border-[#DCE5DF] text-center">
+                    <div class="w-11 h-11 mx-auto mb-3 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <p class="text-xs text-slate-500">Orientasi</p>
+                    <p class="font-bold text-brandNavy mt-1">Masyarakat</p>
+                </div>
+                <div class="bg-[#F2F6F1] rounded-2xl p-5 border border-[#DCE5DF] text-center">
+                    <div class="w-11 h-11 mx-auto mb-3 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <p class="text-xs text-slate-500">Prinsip</p>
+                    <p class="font-bold text-brandNavy mt-1">Berkelanjutan</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -461,6 +563,112 @@
         </div>
     </section>
 
+    <!-- Kegiatan & Dokumentasi -->
+    <section id="kegiatan" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+                <span class="text-brandGreen font-bold text-xs uppercase tracking-widest">Aktivitas BUMKam</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavy mt-2">Kegiatan & Dokumentasi</h2>
+                <div class="w-16 h-1 bg-brandGold mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-500 mt-4 text-sm">
+                    Ruang untuk menampilkan kegiatan, pelayanan, dan perkembangan BUMKam Mineh Mandiri.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="group rounded-3xl overflow-hidden border border-slate-200/70 bg-white shadow-sm hover:shadow-xl transition-all">
+                    <div class="h-56 bg-[#E8EFEB] flex items-center justify-center overflow-hidden">
+                        <div class="text-center text-[#789083]">
+                            <i class="fa-solid fa-camera text-4xl mb-3"></i>
+                            <p class="text-xs font-semibold">Foto Kegiatan 01</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[11px] font-bold text-brandGreen uppercase tracking-wider">Dokumentasi</span>
+                        <h3 class="text-lg font-bold text-brandNavy mt-2">Kegiatan BUMKam</h3>
+                        <p class="text-sm text-slate-500 mt-2 leading-relaxed">Tempat untuk menampilkan dokumentasi kegiatan terbaru BUMKam.</p>
+                    </div>
+                </article>
+
+                <article class="group rounded-3xl overflow-hidden border border-slate-200/70 bg-white shadow-sm hover:shadow-xl transition-all">
+                    <div class="h-56 bg-[#E9F0F1] flex items-center justify-center overflow-hidden">
+                        <div class="text-center text-[#78939A]">
+                            <i class="fa-solid fa-camera text-4xl mb-3"></i>
+                            <p class="text-xs font-semibold">Foto Kegiatan 02</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[11px] font-bold text-brandBlue uppercase tracking-wider">Pelayanan</span>
+                        <h3 class="text-lg font-bold text-brandNavy mt-2">Pelayanan Masyarakat</h3>
+                        <p class="text-sm text-slate-500 mt-2 leading-relaxed">Tempat untuk menampilkan aktivitas pelayanan dan kegiatan bersama masyarakat.</p>
+                    </div>
+                </article>
+
+                <article class="group rounded-3xl overflow-hidden border border-slate-200/70 bg-white shadow-sm hover:shadow-xl transition-all">
+                    <div class="h-56 bg-[#F1EEE3] flex items-center justify-center overflow-hidden">
+                        <div class="text-center text-[#9A8755]">
+                            <i class="fa-solid fa-camera text-4xl mb-3"></i>
+                            <p class="text-xs font-semibold">Foto Kegiatan 03</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[11px] font-bold text-brandGold uppercase tracking-wider">Pengembangan</span>
+                        <h3 class="text-lg font-bold text-brandNavy mt-2">Pengembangan Unit Usaha</h3>
+                        <p class="text-sm text-slate-500 mt-2 leading-relaxed">Tempat untuk menampilkan perkembangan dan inovasi unit usaha BUMKam.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita -->
+    <section id="berita" class="py-24 bg-[#F2F6F1]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-12" data-aos="fade-up">
+                <div>
+                    <span class="text-brandGreen font-bold text-xs uppercase tracking-widest">Informasi Terbaru</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brandNavy mt-2">Berita & Informasi</h2>
+                    <div class="w-16 h-1 bg-brandGold mt-4 rounded-full"></div>
+                </div>
+                <p class="text-slate-500 text-sm max-w-md">
+                    Area berita yang dapat digunakan untuk menyampaikan kabar dan informasi terbaru BUMKam kepada masyarakat.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="bg-white rounded-3xl p-7 border border-slate-200/70 shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-brandGreen/10 text-brandGreen flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+                    <p class="text-xs text-slate-400">Informasi • Terbaru</p>
+                    <h3 class="text-lg font-bold text-brandNavy mt-2">Kabar BUMKam Mineh Mandiri</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-3">Judul dan isi berita dapat ditambahkan di bagian ini saat informasi resmi sudah tersedia.</p>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-sm font-bold text-brandGreen mt-5">Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </article>
+
+                <article class="bg-white rounded-3xl p-7 border border-slate-200/70 shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-brandGold/10 text-brandGold flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <p class="text-xs text-slate-400">Pengumuman</p>
+                    <h3 class="text-lg font-bold text-brandNavy mt-2">Informasi Pelayanan</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-3">Bagian ini dapat digunakan untuk pengumuman penting, jadwal pelayanan, atau informasi masyarakat.</p>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-sm font-bold text-brandGreen mt-5">Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </article>
+
+                <article class="bg-white rounded-3xl p-7 border border-slate-200/70 shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <p class="text-xs text-slate-400">Agenda</p>
+                    <h3 class="text-lg font-bold text-brandNavy mt-2">Agenda & Kegiatan</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-3">Tempat untuk menampilkan agenda BUMKam agar masyarakat mudah mengetahui kegiatan yang akan datang.</p>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-sm font-bold text-brandGreen mt-5">Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Kontak -->
     <section id="kontak" class="py-24 bg-brandNavy text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -539,6 +747,14 @@
             <p>&copy; 2026 BUMKam Mineh Mandiri. Hak Cipta Dilindungi Undang-Undang.</p>
         </div>
     </footer>
+
+
+    <!-- Tombol WhatsApp -->
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#5F8F6A] hover:bg-[#527C5D] text-white flex items-center justify-center shadow-xl hover:scale-105 transition-all"
+       aria-label="Hubungi BUMKam melalui WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
 
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
